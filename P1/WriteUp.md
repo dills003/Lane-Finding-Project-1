@@ -57,7 +57,7 @@ The shortcomings with this current Pipeline would fill up hours and hours of tim
   2. There isn't any error handling built in. If I get slopes that don't fall into my range, I simply do not draw the line. You can see this in my videos as the line flickers.
   3. Not dynamic. If the screen size changes or lane position in the camera changes drastically, the program will suffer greatly.
   4. View the 'Extra' video.
-  5. Poor coding. I have 'magic values', poor names, and all sorts of things that need to be cleaned up. I am coming from the PLC land and, what I do looks not so hot.
+  5. Poor coding. I have 'magic values', poor names, and all sorts of things that need to be cleaned up. I am coming from the PLC land and this is quite different.
   6. My inexperience with what CV and Python offer are probably killing me. I know that there are better and easier ways to do what I am doing.
      
   
