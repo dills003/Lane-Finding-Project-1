@@ -29,19 +29,19 @@ The goals / steps of this project are the following:
 To be honest, this was the very first time I have ever used the term 'pipeline' to mean one part of code flowing into the next. I am new to all of this; Python, Git, Jupyter, CV, etc. So this has been quite the awesome learning experience for me.
 My Pipeline Steps:
   1. Convert the image to grayscale. This makes the imaging processing less intensive.
-  ![alt text][image1]
+    ![alt text][image1]
   2. Blur the Grayscaled image. This helps with making some of the edges smoother and easier to detect.
-  ![alt text][image2]
+    ![alt text][image2]
   3. Apply the Canny edge finder function. This creates lines of where the function found an edge.
-  ![alt text][image3]
+    ![alt text][image3]
   4. Smooth out the Canny edges. This felt like it helped with the Hough lines, but I was changing so many parameters, I am not sure if   it did.  
-  ![alt text][image4]
+    ![alt text][image4]
   5. Mask the region of interest. Since I am only interested in the lane lines, I get rid of all of the extra stuff.  
-  ![alt text][image5]
+    ![alt text][image5]
   6. Find the Hough lines and draw them. Apply the Hough function to find lines based on votes and draw them.
-  ![alt text][image6]
+    ![alt text][image6]  
   7. Combine the orignal image with my Hough version.
-  ![alt text][image7]
+    ![alt text][image7]
 
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
