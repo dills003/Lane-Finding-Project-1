@@ -44,20 +44,17 @@ My Pipeline Steps:
     ![alt text][image7]
 
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by adding a check to see if the slope of the Hough line was positive of negative and within a certain slope range (0.55-0.8
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by adding a check to see if the slope of the Hough line was positive of negative and within a certain slope range (0.55 to 0.85 for Right Lane & -0.55 to -0.85 for Left Lane). I had a bunch of random values that this helped toss out. If the slope was positive and within range I grabbed all of the values (x1, x2, y1, and y2) and put them into x and y arrays. I then used the polyfit 1st order function to give me a slope and y-intercept. Using the max and min Y values for the image, I found the x1 and x2 for the polyfit line and then drew it. It is a very crude method.
 
 
-
-###2. Identify potential shortcomings with your current pipeline
-
-
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
-
-
+###2. Shortcomings with my current Pipeline
+The shortcomings with this current Pipeline would fill up hours and hours of time to discuss. So I will just highlight the really terrible ones.
+  1. It can't handle curves of any sort. The way I am using slope assumes straight lines that bend out toward the bottom of the screen. Curves do not always have this characteristic.
+  2. There isn't any error handling built in. If I get slopes that don't fall into my range, I simply do not draw the line. You can see this in my videos as the line flickers.
+  3. Not dynamic. If the screen size changes or lane position in the camera changes drastically, the program will suffer greatly.
+  4. View the 'Extra' video.
+  5. Poor coding. I have 'magic values', poor names, and all sorts of things that need to be cleaned up. I am coming from the PLC land and, wow! I am rusty.
+  
+  
 ###3. Suggest possible improvements to your pipeline
-
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+The possible improvements would be to fix all of the shortcomings above. The left/right lane draw function needs to be entirely re-thought to allow for curves to be drawn well. Using slopes that are positive and negative and then assigning them a left or right is not good enough. I think I need to look at the left and right sides of the lane separately by doing two masks instead of one and then go from there. CV and Python do so much, that was unexpected. I need to also get better with the parameters for Canny and Hough. I plan on finding a 'tuning' guide.
