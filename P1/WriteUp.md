@@ -44,11 +44,8 @@ My Pipeline Steps:
     ![alt text][image7]
 
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by adding a check to see if the slope of the Hough line was positive of negative and within a certain slope range (0.55-0.8
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
 
 
 ###2. Identify potential shortcomings with your current pipeline
