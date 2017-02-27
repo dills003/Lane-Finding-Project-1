@@ -40,7 +40,11 @@ My Pipeline Steps:
     ![alt text][image5]
   6. Find the Hough lines and draw them. Apply the Hough function to find lines based on votes and draw them.
     ![alt text][image6]  
-  7. Combine the orignal image with my Hough version.
+  7. Combine the original image with my Hough version.
+    
+    
+    
+    
     ![alt text][image7]
 
 
